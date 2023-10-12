@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const hotelRouter = require("./routes/hotel.router");
 const categoryRouter = require("./routes/category.router");
 const singleHotelRouter = require("./routes/singlehotel.router");
@@ -13,6 +14,7 @@ dotenv.config();     // either include this in config file or here else URI valu
 
 
 const app = express();
+app.use(cors());
 
 connectDB();
 
